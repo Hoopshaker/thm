@@ -1,3 +1,4 @@
 *.ovpn
 connect_thm.sh
 disconnect_thm.sh
+**/init.sh
