@@ -46,14 +46,6 @@ echo "ROCKYOU_WL=/usr/share/wordlists/SecLists/Passwords/Leaked-Databases/rockyo
 echo "DIR_WL=/usr/share/wordlists/SecLists/Discovery/Web-Content/directory-list-2.3-big.txt">>$room/init.sh
 chmod +x $room/init.sh 
 
-# adding .gitignore file to folder
-if [ -f "$room/.gitignore" ]; then
-	echo ".gitignore file exists"
-else
-	echo "Creating .gitignore file"
-	echo "init.sh" > $room/.gitignore
-fi
-
 # scans folder
 if [ ! -d "$room/scans" ]; then
     mkdir $room/scans;
