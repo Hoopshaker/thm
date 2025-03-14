@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94SVN scan initiated Fri Mar  7 09:15:27 2025 as: nmap -A -T4 -p- -vv -oA scans/nmap_scan_20250307 10.10.157.86 -->
+<nmaprun scanner="nmap" args="nmap -A -T4 -p- -vv -oA scans/nmap_scan_20250307 10.10.157.86" start="1741335327" startstr="Fri Mar  7 09:15:27 2025" version="7.94SVN" xmloutputversion="1.05">
+<scaninfo type="connect" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1741335328"/>
+<taskend task="NSE" time="1741335328"/>
+<taskbegin task="NSE" time="1741335328"/>
+<taskend task="NSE" time="1741335328"/>
+<taskbegin task="NSE" time="1741335328"/>
+<taskend task="NSE" time="1741335328"/>
+<taskbegin task="Ping Scan" time="1741335328"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.10.157.86" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<taskend task="Ping Scan" time="1741335328" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1741335328"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1741335328"/>
+<taskbegin task="Connect Scan" time="1741335328"/>
+<taskend task="Connect Scan" time="1741335338" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1741335338"/>
+<taskend task="Service scan" time="1741335348" extrainfo="4 services on 1 host"/>
+<taskbegin task="NSE" time="1741335348"/>
+<taskend task="NSE" time="1741335353"/>
+<taskbegin task="NSE" time="1741335353"/>
+<taskend task="NSE" time="1741335353"/>
+<taskbegin task="NSE" time="1741335353"/>
+<taskend task="NSE" time="1741335353"/>
+<host starttime="1741335328" endtime="1741335353"><status state="up" reason="conn-refused" reason_ttl="0"/>
+<address addr="10.10.157.86" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65531">
+<extrareasons reason="conn-refused" count="65531" proto="tcp" ports="1-21,23-52,54-8008,8010-8079,8081-65535"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ssh" product="OpenSSH" version="7.2p2 Ubuntu 4ubuntu2.8" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.2p2</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 f3:c8:9f:0b:6a:c5:fe:95:54:0b:e9:e3:ba:93:db:7c (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDQvC8xe2qKLoPG3vaJagEW2eW4juBu9nJvn53nRjyw7y/0GEWIxE1KqcPXZiL+RKfkKA7RJNTXN2W9kCG8i6JdVWs2x9wD28UtwYxcyo6M9dQ7i2mXlJpTHtSncOoufSA45eqWT4GY+iEaBekWhnxWM+TrFOMNS5bpmUXrjuBR2JtN9a9cqHQ2zGdSlN+jLYi2Z5C7IVqxYb9yw5RBV5+bX7J4dvHNIs3otGDeGJ8oXVhd+aELUN8/C2p5bVqpGk04KI2gGEyU611v3eOzoP6obem9vsk7Kkgsw7eRNt1+CBrwWldPr8hy6nhA6Oi5qmJgK1x+fCmsfLSH3sz1z4Ln&#xa;  256 dd:1a:09:f5:99:63:a3:43:0d:2d:90:d8:e3:e1:1f:b9 (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOscw5angd6i9vsr7MfCAugRPvtx/aLjNzjAvoFEkwKeO53N01Dn17eJxrbIWEj33sp8nzx1Lillg/XM+Lk69CQ=&#xa;  256 48:d1:30:1b:38:6c:c6:53:ea:30:81:80:5d:0c:f1:05 (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGqgzoXzgz5QIhEWm3+Mysrwk89YW2cd2Nmad+PrE4jw"><table>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQDQvC8xe2qKLoPG3vaJagEW2eW4juBu9nJvn53nRjyw7y/0GEWIxE1KqcPXZiL+RKfkKA7RJNTXN2W9kCG8i6JdVWs2x9wD28UtwYxcyo6M9dQ7i2mXlJpTHtSncOoufSA45eqWT4GY+iEaBekWhnxWM+TrFOMNS5bpmUXrjuBR2JtN9a9cqHQ2zGdSlN+jLYi2Z5C7IVqxYb9yw5RBV5+bX7J4dvHNIs3otGDeGJ8oXVhd+aELUN8/C2p5bVqpGk04KI2gGEyU611v3eOzoP6obem9vsk7Kkgsw7eRNt1+CBrwWldPr8hy6nhA6Oi5qmJgK1x+fCmsfLSH3sz1z4Ln</elem>
+<elem key="fingerprint">f3c89f0b6ac5fe95540be9e3ba93db7c</elem>
+<elem key="bits">2048</elem>
+<elem key="type">ssh-rsa</elem>
+</table>
+<table>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOscw5angd6i9vsr7MfCAugRPvtx/aLjNzjAvoFEkwKeO53N01Dn17eJxrbIWEj33sp8nzx1Lillg/XM+Lk69CQ=</elem>
+<elem key="fingerprint">dd1a09f59963a3430d2d90d8e3e11fb9</elem>
+<elem key="bits">256</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+</table>
+<table>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIGqgzoXzgz5QIhEWm3+Mysrwk89YW2cd2Nmad+PrE4jw</elem>
+<elem key="fingerprint">48d1301b386cc653ea3081805d0cf105</elem>
+<elem key="bits">256</elem>
+<elem key="type">ssh-ed25519</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="8009"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="ajp13" product="Apache Jserv" extrainfo="Protocol v1.3" method="probed" conf="10"/><script id="ajp-methods" output="&#xa;  Supported methods: GET HEAD POST OPTIONS&#xa;"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="0"/><service name="http" product="Apache Tomcat" version="9.0.30" method="probed" conf="10"><cpe>cpe:/a:apache:tomcat:9.0.30</cpe></service><script id="http-title" output="Apache Tomcat/9.0.30"><elem key="title">Apache Tomcat/9.0.30</elem>
+</script><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-favicon" output="Apache Tomcat"/></port>
+</ports>
+<times srtt="22727" rttvar="2229" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1741335353"/>
+<taskend task="NSE" time="1741335353"/>
+<taskbegin task="NSE" time="1741335353"/>
+<taskend task="NSE" time="1741335353"/>
+<taskbegin task="NSE" time="1741335353"/>
+<taskend task="NSE" time="1741335353"/>
+<runstats><finished time="1741335353" timestr="Fri Mar  7 09:15:53 2025" summary="Nmap done at Fri Mar  7 09:15:53 2025; 1 IP address (1 host up) scanned in 25.56 seconds" elapsed="25.56" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
