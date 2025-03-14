@@ -33,7 +33,7 @@ else
 	echo "Folder $room already exists"
 fi
 
-# init.sh folder
+# init.sh file
 if [ -f "$room/init.sh" ]; then
 	echo "Updating init.sh file"
 else
