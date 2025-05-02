@@ -4,7 +4,7 @@ $ENC_SECRET_KEY_2="bbvnlnbmz,vùznvkznvklnvljkdsnvlkdnvkdnvkndvlkndkvnkdnvkdnvkd
 $user='guest';
 $admin="admin";
 
-$user_agent="Mozilla/5.0 (X11; Linux x86_64; rv:137.0) Gecko/20100101 Firefox/137.0";
+$user_agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:129.0) Gecko/20100101 Firefox/129.0";
 
 function generate_cookie($user,$user_agent,$ENC_SECRET_KEY, $SALT) {
     
@@ -76,13 +76,13 @@ function generate_combinations() {
 
 // Main
 //$combinations = generate_combinations();
-$combinations= ['pv'];
+$combinations= ['On'];
 $text=$user.":".$user_agent.":".$ENC_SECRET_KEY;
 $text_2=$user.":".$user_agent.":".$ENC_SECRET_KEY_2;
 $text_admin=$admin.":".$user_agent.":".$ENC_SECRET_KEY;
 $text_admin_2=$admin.":".$user_agent.":".$ENC_SECRET_KEY_2;
 $SALT="pv";
-$cookie_to_verify="pv7rrgpYl4mvIpvscziowzgsxspvZgqQJeLGqXwpv6IRBaaVqltcpv7Eg6zOmTTI.pvZIyeOex.3PQpvYSJLCiKU5VkpvZ6Cgw/IUjxApvZMlNCmHCQnEpvbX2HVqYU2ropv2K3kdFR3A2YpvI7LOKrfd8uopvgmkHOia2r66pvmTmIREmKI4QpvxfViBrfVXQcpvV2xvCXWbqBkpvuVUq4lyhsWspvPvHcfknifbkpvchhGb.cH9iUpvSxywEINpGDkpvKu9OWmu6fXUpvMrKrb6KGa5kpvtRbPg.UdwGwpvuY7uAr6O9PEpvh887OcH/b/.pvRAXxKBf39JUpvCGE38Pjz38IpvvyKBTx/t1NApvtb6Aw6dS2mw";
+$cookie_to_verify="OnIfP4alb2ztMOnKIdSPQMnJ3MOnQsfSPJBKfHEOnxUYjFB/26QAOnnb.h/xQm1hUOn4LoeF82ZIMwOnxNQQ2X7ilyEOnoI6LaoFon72On1IP9BqvTX6oOnN46QZPFNaQIOnKXU0DafMByUOnLQSs.Vcs5.oOn7nJIvS0SodIOn3joTUZPTpgcOnqGpAoA8lQ4MOnFMnQ8rEl0XsOno8PAXEg4WPQOn05M9Fx7jgvQOnML0cwYstcLwOnkqVbjMA.fxEOnbbQQyeIFiUcOnK6VgYncYfu6OnB5jnRFQTzVkOna/W49CTRQcYOnsF7b1w/8aisOn4BqoYJlqzdcOnxr71PNWpBWEOn1rNYNdLxqDsOnf5PpklvzjoAOnQC7wwe5T3Ms";
 
 foreach ($combinations as $combination) {
 	echo "Guest"."\n";
@@ -90,7 +90,16 @@ foreach ($combinations as $combination) {
 	echo "\t".$combination." 2->".make_secure_cookie($text_2,$combination) . "\n";
 	echo "Admin"."\n";
         echo "\t".$combination." 1->".make_secure_cookie($text_admin,$combination) . "\n";
-        echo "\t".$combination." 2->".make_secure_cookie($text_admin_2,$combination) . "\n";
+	echo "\t".$combination." 2->".make_secure_cookie($text_admin_2,$combination) . "\n";
 }
+
+$crypted_cookie=make_secure_cookie($text,$combination);
+$res_verification=verify_cookie($user, $crypted_cookie,$user_agent,$ENC_SECRET_KEY);
+if($res_verification){
+	echo "Verification OK!\n";
+}else{
+	echo "Verification KO!\n";
+}
+
     
 ?>
