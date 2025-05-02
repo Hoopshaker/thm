@@ -43,7 +43,7 @@ fi
 echo "#! /bin/bash" > $room/init.sh
 echo "TARGET=$ip">>$room/init.sh
 echo "ROCKYOU_WL=/usr/share/wordlists/SecLists/Passwords/Leaked-Databases/rockyou.txt">>$room/init.sh
-echo "DIR_WL=/usr/share/wordlists/SecLists/Discovery/Web-Content/directory-list-2.3-big.txt">>$room/init.sh
+echo "DIR_WL=/usr/share/wordlists/SecLists/Discovery/Web-Content/directory-list-2.3-small.txt">>$room/init.sh
 chmod +x $room/init.sh 
 
 # scans folder
